@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CineVerse</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo">
+      <svg class="logo-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="3,1 19,10 3,19" class="logo-triangle" stroke="#3b6ff5" stroke-width="2" stroke-linejoin="round"/></svg>Cine<span>Verse</span>
+    </div>
+    <nav>
+      <a class="nav-item active" href="#" data-page="acasa">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/></svg>
+        Acasa
+      </a>
+      <a class="nav-item" href="#" data-page="filme">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="9" height="9" rx="1"/><rect x="13" y="2" width="9" height="9" rx="1"/><rect x="2" y="13" width="9" height="9" rx="1"/><rect x="13" y="13" width="9" height="9" rx="1"/></svg>
+        Filme
+      </a>
+      <a class="nav-item" href="#" data-page="seriale">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        Seriale
+      </a>
+      <a class="nav-item" href="#" data-list="favorite">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        Favorite
+      </a>
+      <a class="nav-item" href="#" data-list="watchlist">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+        Watchlist
+      </a>
+      <a class="nav-item" href="#">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Recente
+      </a>
+      <a class="nav-item" href="profil.php">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        Setari
+      </a>
+    </nav>
+    <div class="sidebar-bottom">
+      <p class="continue-label">CONTINUA VIZIONAREA</p>
+      <div class="continue-card">
+        <div class="continue-thumb">THE HUNGER GAMES</div>
+        <div class="continue-info">
+          <p>The Hunger Games</p>
+          <div class="progress-bar"><div class="progress-fill"></div></div>
+          <span class="continue-time">51:23 – 2:22:32</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topnav">
+      <nav class="topnav-links">
+<a class="topnav-link active" href="#" id="topnav-acasa" data-nav="acasa">Acasa</a>
+<a class="topnav-link" href="#" data-nav="categorii">Categorii</a>
+<a class="topnav-link" href="#" data-nav="top">Top</a>
+<a class="topnav-link" href="#" id="btn-despre">Despre</a>
+      </nav>
+      <div class="search-bar" id="search-wrapper">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" id="search-input" placeholder="Cauta filme sau seriale..."/>
+        <div class="search-dropdown" id="search-dropdown"></div>
+      </div>
+      <div class="topnav-icons">
+        <div class="icon-btn" id="theme-toggle" title="Schimbă tema">
+          <span class="icon-sun">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </span>
+          <span class="icon-moon">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          </span>
+        </div>
+        <div class="icon-btn">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>
+        </div>
+        <div class="avatar" id="avatar-btn"></div>
+      </div>
+    </header>
+
+    <div id="page-acasa">
+      <section class="hero-section">
+        <div class="hero">
+          <div class="hero-content">
+            <h1 class="hero-title">STRANGER THINGS</h1>
+            <div class="hero-meta">
+              <span class="rating">★ 8.4</span>
+              <span class="year">2016–2025</span>
+              <span class="badge">Mystery</span>
+            </div>
+            <p class="hero-desc">Stranger Things este un serial SF și mister despre un grup de copii care descoperă experimente secrete, creaturi ciudate și o lume paralelă, după dispariția unui băiat.</p>
+            <div class="hero-buttons">
+              <button class="btn-primary"><span class="play-icon"></span> Vizioneaza</button>
+              <button class="btn-ghost">Vezi detalii</button>
+            </div>
+          </div>
+          <div class="hero-img">
+            <img
+              src="strangerthings.png"
+              alt="Stranger Things"
+              class="hero-show-logo"
+              onerror="this.style.display='none'; this.parentElement.querySelector('.hero-fallback').style.display='flex'"
+            />
+            <div class="hero-fallback" style="display:none; align-items:center; justify-content:center; width:100%; height:100%; font-family:'Barlow Condensed',sans-serif; font-size:1.8rem; font-weight:700; color:rgba(255,255,255,.15); letter-spacing:2px; text-align:center;">STRANGER<br>THINGS</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Filme populare</h2>
+          <a href="#" class="vezi-toate">Vezi toate →</a>
+        </div>
+        <div class="slider-wrapper">
+          <button class="arrow arrow-prev" style="opacity:0;pointer-events:none;">&#8249;</button>
+          <div class="cards-row" id="movies-container"></div>
+          <button class="arrow arrow-next">&#8250;</button>
+        </div>
+      </section>
+
+      <section class="section section-last">
+        <div class="section-header">
+          <h2 class="section-title">Seriale populare</h2>
+          <a href="#" class="vezi-toate">Vezi toate →</a>
+        </div>
+        <div class="slider-wrapper">
+          <button class="arrow arrow-prev" style="opacity:0;pointer-events:none;">&#8249;</button>
+          <div class="cards-row" id="series-container"></div>
+          <button class="arrow arrow-next">&#8250;</button>
+        </div>
+      </section>
+    </div>
+
+    <div id="page-filme" style="display:none;">
+      <div class="grid-page-header">
+        <h1 class="grid-page-title">Filme</h1>
+      </div>
+      <div class="grid-container" id="movies-grid"></div>
+    </div>
+
+    <div id="page-list" style="display:none;">
+      <div class="grid-page-header">
+        <h1 class="grid-page-title" id="list-page-title"></h1>
+      </div>
+      <div class="grid-container" id="list-container"></div>
+    </div>
+
+    <div id="page-seriale" style="display:none;">
+      <div class="grid-page-header">
+        <h1 class="grid-page-title">Seriale</h1>
+      </div>
+      <div class="grid-container" id="series-grid"></div>
+    </div>
+  </div>
+
+  <div class="auth-modal" id="authModal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeModal">&times;</span>
+      <div class="modal-tabs">
+        <button class="tab-btn active" id="tab-login">Autentificare</button>
+        <button class="tab-btn" id="tab-register">Înregistrare</button>
+      </div>
+      <form action="procesare.php" method="POST" id="login-form" class="auth-form active">
+        <input type="hidden" name="actiune" value="login">
+        <div class="form-group">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" name="email" required placeholder="nume@exemplu.com">
+        </div>
+        <div class="form-group">
+          <label for="login-password">Parolă</label>
+          <input type="password" id="login-password" name="parola" required placeholder="••••••••">
+        </div>
+        <button type="submit" class="btn-primary btn-full">Intră în cont</button>
+      </form>
+      <form action="procesare.php" method="POST" id="register-form" class="auth-form">
+        <input type="hidden" name="actiune" value="register">
+        <div class="form-group">
+          <label for="reg-username">Nume utilizator</label>
+          <input type="text" id="reg-username" name="username" required placeholder="utilizator123">
+        </div>
+        <div class="form-group">
+          <label for="reg-email">Email</label>
+          <input type="email" id="reg-email" name="email" required placeholder="nume@exemplu.com">
+        </div>
+        <div class="form-group">
+          <label for="reg-password">Parolă</label>
+          <input type="password" id="reg-password" name="parola" required placeholder="Minim 6 caractere">
+        </div>
+        <button type="submit" class="btn-primary btn-full">Creează cont</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="auth-modal" id="profileModal">
+    <div class="modal-content settings-modal-content">
+      <span class="close-modal" id="closeProfileModal">&times;</span>
+      <div class="profile-header">
+        <div class="profile-avatar-large" id="profileInitials"></div>
+        <div>
+          <h2 class="profile-name" id="profileName"></h2>
+          <p class="profile-email" id="profileEmail"></p>
+        </div>
+      </div>
+      <div class="profile-stats">
+        <div class="stat-card"><span class="stat-num">0</span><span class="stat-label">Favorite</span></div>
+        <div class="stat-card"><span class="stat-num">0</span><span class="stat-label">Watchlist</span></div>
+        <div class="stat-card"><span class="stat-num">0</span><span class="stat-label">Vizionate</span></div>
+      </div>
+      <div class="settings-tabs">
+        <button class="stab active" data-tab="profil">Profil</button>
+        <button class="stab" data-tab="setari">Setări</button>
+        <button class="stab" data-tab="securitate">Securitate</button>
+      </div>
+      <div class="stab-content active" id="stab-profil">
+        <div class="form-group">
+          <label>Nume utilizator</label>
+          <input type="text" id="edit-username" placeholder="Numele tău">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="edit-email" placeholder="email@exemplu.com">
+        </div>
+        <div class="form-group">
+          <label>Biografie</label>
+          <textarea id="edit-bio" placeholder="Scrie ceva despre tine..." rows="3" style="width:100%;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px 14px;color:var(--text);font-family:inherit;font-size:.9rem;outline:none;resize:none;transition:border-color .2s;box-sizing:border-box;"></textarea>
+        </div>
+        <button class="btn-primary btn-full">Salvează modificările</button>
+      </div>
+      <div class="stab-content" id="stab-setari">
+        <div class="settings-row">
+          <div>
+            <p class="settings-row-title">Notificări email</p>
+            <p class="settings-row-desc">Primește noutăți despre filme și seriale</p>
+          </div>
+          <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+        </div>
+
+        <div class="settings-row">
+          <div>
+            <p class="settings-row-title">Limbă interfață</p>
+            <p class="settings-row-desc">Schimbă limba site-ului</p>
+          </div>
+          <div class="lang-btns">
+            <button class="lang-btn" data-lang="ro">RO</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ru">RU</button>
+          </div>
+        </div>
+
+        <div class="settings-row">
+          <div>
+            <p class="settings-row-title">Mod întunecat</p>
+            <p class="settings-row-desc">Interfața cu fundal închis</p>
+          </div>
+          <label class="toggle-switch"><input type="checkbox" id="dark-mode-toggle" checked><span class="toggle-slider"></span></label>
+        </div>
+        <div class="settings-row">
+          <div>
+            <p class="settings-row-title">Calitate video</p>
+            <p class="settings-row-desc">Rezoluția implicită la redare</p>
+          </div>
+          <select style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:7px 12px;color:var(--text);font-family:inherit;font-size:.88rem;outline:none;">
+            <option>Auto</option><option>1080p</option><option>720p</option><option>480p</option>
+          </select>
+        </div>
+      </div>
+      <div class="stab-content" id="stab-securitate">
+        <div class="form-group">
+          <label>Parola actuală</label>
+          <input type="password" placeholder="••••••••">
+        </div>
+        <div class="form-group">
+          <label>Parola nouă</label>
+          <input type="password" placeholder="Minim 6 caractere">
+        </div>
+        <div class="form-group">
+          <label>Confirmă parola nouă</label>
+          <input type="password" placeholder="Repetă parola">
+        </div>
+        <button class="btn-primary btn-full">Schimbă parola</button>
+        <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border);">
+          <p class="settings-row-title" style="margin-bottom:6px;">Șterge contul</p>
+          <p class="settings-row-desc" style="margin-bottom:12px;">Această acțiune este permanentă și nu poate fi anulată.</p>
+          <button class="btn-danger">Șterge contul meu</button>
+        </div>
+      </div>
+      <a href="logout.php" class="btn-logout">Deconectare</a>
+    </div>
+  </div>
+  <div class="auth-modal" id="despreModal">
+  <div class="modal-content"style="max-width:560px; width:90%;">
+    <span class="close-modal" id="closeDespreModal">&times;</span>
+    <div style="text-align:center; margin-bottom:24px;">
+      <svg style="margin-bottom:10px;" viewBox="0 0 20 20" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="3,1 19,10 3,19" stroke="#3b6ff5" stroke-width="2" stroke-linejoin="round"/>
+      </svg>
+      <h2 style="font-family:'Barlow Condensed',sans-serif; font-size:1.6rem; margin:0; color:var(--text);">Cine<span style="color:#3b6ff5;">Verse</span></h2>
+      <p style="color:var(--muted); font-size:.85rem; margin-top:4px;">v1.0.0</p>
+    </div>
+    <p style="color:var(--text); font-size:.93rem; line-height:1.6; margin-bottom:20px;">
+      CineVerse este o platformă dedicată pasionaților de film și seriale. Descoperă titluri noi, salvează-ți favoritele și ține evidența a ce vrei să vizionezi.
+    </p>
+    <div style="background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:16px 20px; margin-bottom:16px;">
+      <p style="font-size:.82rem; font-weight:700; color:var(--muted); letter-spacing:.08em; margin:0 0 12px;">CONTACT</p>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+        <svg width="16" height="16" fill="none" stroke="#3b6ff5" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span style="color:var(--text); font-size:.9rem;">contact@cineverse.ro</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+        <svg width="16" height="16" fill="none" stroke="#3b6ff5" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+        <span style="color:var(--text); font-size:.9rem;">www.cineverse.ro</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <svg width="16" height="16" fill="none" stroke="#3b6ff5" stroke-width="2" viewBox="0 0 24 24"><path d="M21 2H3v16h5l4 4 4-4h5V2z"/></svg>
+        <span style="color:var(--text); font-size:.9rem;">@CineVerse pe Instagram & X</span>
+      </div>
+    </div>
+    <p style="color:var(--muted); font-size:.8rem; text-align:center; margin:0;">
+      © 2026 CineVerse. Toate drepturile rezervate.<br>Date furnizate de <a href="https://www.omdbapi.com" target="_blank" style="color:#3b6ff5;">OMDb API</a>.
+    </p>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+  <script src="profil.js"></script>
+</body>
+</html>
